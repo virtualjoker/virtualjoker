@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Virtualjoker</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link type="text/css" rel="stylesheet" href="./css.css">
+    <script type="text/javascript" src="./_ah/channel/jsapi"></script>
+    <script type="text/javascript" src="./jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="./jquery-ui-1.8.9.custom.min.js"></script>
+    <script type="text/javascript" src="./game.js"></script>
+    <script type="text/javascript" src="./game_action.js"></script>
+    <script type="text/javascript" src="./game_channel.js"></script>
+    <script type="text/javascript" src="./game_feeder.js"></script>
+    <script type="text/javascript" src="./game_handler.js"></script>
+    <script type="text/javascript" src="./game_listener.js"></script>
+    <script type="text/javascript" src="./game_screen.js"></script>
+    <!-- This is just for debug -->
+		<script type="text/javascript" src="./dump.js"></script>
+		
+		<script type="text/javascript">
+		  is_develompent = {% if is_develompent %}true{% else %}false{% endif %};
+		</script>
+		
+  </head>
+  <body>
+    <div id="_out" style="position: absolute; top: 0px; left: 0px; z-index: 101;"></div>
+    <div style="position:fixed; bottom:0; left:0;">
+      <div><input id="_out_active" type="checkbox"{% if is_develompent %} checked="checked"{% endif %}></div>
+      <div>{% if is_develompent %}Development Server{% else %}Google Server{% endif %}</div>
+      <div>client_id: {{ client_id }}</div>
+      <div>client_char_id: {{ client_char_id }}</div>
+      <div>client_char_place_id: {{ client_char_place_id }}</div>
+      <div><a href="{{ logout_url }}">logout</a></div>
+    </div>
+  </body>
+</html>

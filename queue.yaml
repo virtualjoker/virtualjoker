@@ -1,0 +1,4 @@
+queue:
+- name: server
+  rate: 10/m
+
