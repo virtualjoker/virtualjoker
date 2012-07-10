@@ -9,7 +9,7 @@ from jsonproperty import JsonProperty
 from chars import Char
 from items import Item
 from aux import add_response
-from aux import distance
+#from aux import distance
 from google.appengine.ext import db
 
 # This is the signature of all feeder actions availables

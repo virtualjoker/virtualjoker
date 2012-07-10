@@ -10,36 +10,29 @@ indexes:
 # automatically uploaded to the admin console when you next deploy
 # your application using appcfg.py.
 
-# USED IN: clients.py
-- kind: Client
-  properties:
-  - name: active
-  - name: user
-
-# USED IN: action_handler.py
 - kind: Action
   properties:
   - name: active
   - name: action
   - name: char
 
-# USED IN: feeder_handler.py
 - kind: Char
   properties:
   - name: active
   - name: online
   - name: place
 
-# USED IN: feeder_handler.py
+- kind: Client
+  properties:
+  - name: active
+  - name: user
+
 - kind: Item
   properties:
   - name: active
   - name: place
 
-
-# USED IN: feeder_handler.py
 - kind: Update
   properties:
   - name: place
   - name: datetime
-
